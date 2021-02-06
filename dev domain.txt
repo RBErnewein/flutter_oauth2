@@ -1,0 +1,8 @@
+dev-t46zp1pm
+
+Domain
+dev-t46zp1pm.us.auth0.com
+
+Client ID
+IfV2LbuCmhJ6rdnbgMC48t8zlEY59ITV
+
