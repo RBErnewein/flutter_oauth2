@@ -1,16 +1,28 @@
-
-
-/// -----------------------------------
+// -----------------------------------
 ///          External Packages
 /// -----------------------------------
 
 import 'package:flutter/material.dart';
 
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter_appauth/flutter_appauth.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+final FlutterAppAuth appAuth = FlutterAppAuth();
+final FlutterSecureStorage secureStorage = const FlutterSecureStorage();
+
+
+
 /// -----------------------------------
 ///           Auth0 Variables
 /// -----------------------------------
 
+const AUTH0_DOMAIN = 'YOUR-AUTH0-DOMAIN';
+const AUTH0_CLIENT_ID = 'YOUR-AUTH0-CLIENT-ID';
 
+const AUTH0_REDIRECT_URI = 'com.auth0.flutterdemo://login-callback';
+const AUTH0_ISSUER = 'https://$AUTH0_DOMAIN';
 
 /// -----------------------------------
 ///           Profile Widget
@@ -53,8 +65,6 @@ class Profile extends StatelessWidget {
     );
   }
 }
-
-
 
 /// -----------------------------------
 ///            Login Widget
